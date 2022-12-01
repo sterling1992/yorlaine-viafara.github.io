@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    font-family: cursive;
+    font-size: 1rem;
+    min-height: 100%;
+    background-image: url('./ropa-estante-neon_1262-20731.webp');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.856);
+}
+.logo{
+    width: 70px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.logo2{
+    width: 90px; 
+    border-radius: 20px;
+}
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+h1{
+    color: black;
+}
+.header {
+    grid-area: header;
+    background-image: url('Marca de Agua Café Colao.png');
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.header:hover{
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+
+}
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px cyan;
+}
+.navbar {
+    grid-area: navbar;
+    background-image: url('Marca de Agua Café Colao.png');
+    background-size: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.navbar:hover{
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: -1px 1px 7px 0px blueviolet;
+}
+.imgnav{
+    width: 50px;
+    border-radius: 20px;
+}
+.logo3{
+    width: 400px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-image: url('Granos de café 2.jpg');
+    background-color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    text-align: justify;
+    color: black;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+}
+.sidebar:hover{
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: -1px 1px 7px 0px darkorange;
+}
+.subtitulo{
+    color: cornflowerblue;
+    font-size: 25px;
+}
+.dos{
+    color: black;
+}
+.main {
+    grid-area: main;
+    background-image: url('Parrilla 1.jpg');
+    background-size: cover;
+    background-position-x: left;
+}
+.yuri0{
+    color: aqua;
+}
+.yuri1{
+    color: aqua;
+}
+.yuri2{
+    color: aqua;
+}
+.yuri20{
+    color: aqua;
+}
+.yuri3{
+    color: aqua;
+}
+.imgmain{
+    width: 100px;
+    border-radius: 20px;
+}
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+.footer {
+    background-color: rgba(255, 255, 255, 0);
+    grid-area: footer;
+    background-image: url('Granos de café 1.jpg');
+    background-size: 120px;
+    background-position-y: start;
+} 
+.footer:hover{
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: -1px 1px 7px 0px whitesmoke;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 100px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 70px/
+        200px    auto;
+        overflow-y: scroll;
+    }
+}
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  100px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  50px/
+        150px    auto    200px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
